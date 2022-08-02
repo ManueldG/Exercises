@@ -1,0 +1,24 @@
+title Manuel
+
+
+Browser->+Server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/notes
+Server-->-Browser: Document HTML
+
+Browser->+Server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.css
+Server-->-Browser: main.css
+
+Browser->+Server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.js
+Server-->-Browser: main.js
+
+note over Browser:
+browser starts executing js-code
+that requests JSON data from server 
+end note
+
+Browser->+Server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/data.json
+Server-->-Browser: [{"content":"O","date":"2022-08-02T18:48:00.506Z"}....
+
+note over Browser:
+browser executes the event handler
+that renders notes to display
+end note
